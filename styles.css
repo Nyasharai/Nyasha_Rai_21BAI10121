@@ -1,0 +1,108 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000; /* Set background to black */
+    margin: 0;
+    color: #fff; /* Default text color to white for contrast */
+}
+
+#game-container {
+    text-align: center;
+    background-color: #1e1e1e; /* Slightly lighter background for the game container */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 15px; /* Reduced padding */
+    width: 300px; /* Reduced width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#gameBoard {
+    display: grid;
+    grid-template-columns: repeat(5, 40px); /* 5 columns, each 40px wide */
+    grid-template-rows: repeat(5, 40px); /* 5 rows, each 40px tall */
+    gap: 3px; /* Reduced space between cells */
+    margin: 15px 0; /* Reduced vertical margin */
+}
+
+.cell {
+    width: 40px; /* Reduced width */
+    height: 40px; /* Reduced height */
+    background-color: #333; /* Darker cells for better contrast */
+    border: 1px solid #555; /* Slightly lighter border */
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 12px; /* Reduced font size */
+    color: #fff; /* White text for contrast */
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.cell:hover {
+    background-color: #444; /* Slightly lighter on hover */
+    border-color: #666;
+}
+
+button {
+    padding: 5px 10px; /* Reduced padding */
+    margin: 3px; /* Reduced margin */
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px; /* Reduced font size */
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+#game-log {
+    margin-top: 10px; /* Reduced margin */
+    max-height: 150px; /* Reduced max-height */
+    overflow-y: auto;
+    border: 1px solid #555;
+    padding: 8px; /* Reduced padding */
+    background-color: #1e1e1e; /* Consistent with the game container */
+    border-radius: 5px;
+    font-size: 12px; /* Reduced font size */
+}
+
+#player-info {
+    margin-top: 10px; /* Reduced margin */
+    font-size: 16px; /* Reduced font size */
+    font-weight: bold;
+    color: #fff; /* White text for contrast */
+}
+
+#game-over-screen {
+    display: none;
+    margin-top: 10px; /* Reduced margin */
+    padding: 15px; /* Reduced padding */
+    border: 2px solid #007bff;
+    background-color: #1e1e1e; /* Consistent with the game container */
+    border-radius: 10px;
+    font-size: 18px; /* Reduced font size */
+    font-weight: bold;
+    color: #007bff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#game-over-screen p {
+    margin: 0;
+    margin-bottom: 5px; /* Reduced margin */
+}
