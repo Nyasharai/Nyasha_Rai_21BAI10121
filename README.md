@@ -34,7 +34,7 @@ This project is a turn-based chess-like game implemented with a 5x5 grid. The ga
 
 2. **Navigate to the Project Directory:**
    cd Chess-game
-   
+     
 3. **Install Dependencies:**
    npm install
 
